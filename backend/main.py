@@ -37,10 +37,9 @@ app = FastAPI(
     version="0.1.0",
 )
 
-# CORS: open for demo. In production, restrict to your frontend domain.
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=["https://frontend-eosin-psi-29.vercel.app"],
     allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
