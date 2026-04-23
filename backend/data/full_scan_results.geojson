@@ -1,0 +1,1040 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ANM-T02-01",
+        "tile_id": "T02",
+        "type": "vegetation_loss",
+        "severity": "low",
+        "description": "NDVI drop >0.3 over contiguous 2+ hectare area",
+        "detected_at": "2026-04-19T13:11:55.238316Z",
+        "confidence": 0.87,
+        "source": "sentinel-2_ndvi",
+        "area_hectares": 10.27,
+        "status": "unreviewed",
+        "distance_to_pipeline_m": 466
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          70.188654,
+          22.446342
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ANM-T02-02",
+        "tile_id": "T02",
+        "type": "encroachment",
+        "severity": "medium",
+        "description": "New permanent structure detected within RoW",
+        "detected_at": "2026-04-16T18:11:55.238316Z",
+        "confidence": 0.78,
+        "source": "sentinel-2_classification",
+        "area_hectares": 1.28,
+        "status": "unreviewed",
+        "distance_to_pipeline_m": 380
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          69.789257,
+          22.376025
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ANM-T03-01",
+        "tile_id": "T03",
+        "type": "water_pooling",
+        "severity": "medium",
+        "description": "Unusual water accumulation near RoW, possible subsidence",
+        "detected_at": "2026-04-20T01:11:55.238316Z",
+        "confidence": 0.76,
+        "source": "sentinel-1_backscatter",
+        "area_hectares": 5.16,
+        "status": "unreviewed",
+        "distance_to_pipeline_m": 392
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          70.281198,
+          22.481405
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ANM-T03-02",
+        "tile_id": "T03",
+        "type": "vegetation_loss",
+        "severity": "medium",
+        "description": "Seasonal NDVI variation within expected range",
+        "detected_at": "2026-04-19T15:11:55.238316Z",
+        "confidence": 0.87,
+        "source": "sentinel-2_ndvi",
+        "area_hectares": 10.29,
+        "status": "unreviewed",
+        "distance_to_pipeline_m": 839
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          70.673105,
+          22.53367
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ANM-T03-03",
+        "tile_id": "T03",
+        "type": "encroachment",
+        "severity": "high",
+        "description": "Unauthorized construction adjacent to pipeline",
+        "detected_at": "2026-04-18T08:11:55.238316Z",
+        "confidence": 0.9,
+        "source": "sentinel-2_classification",
+        "area_hectares": 1.82,
+        "status": "unreviewed",
+        "distance_to_pipeline_m": 139
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          70.721506,
+          22.479105
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ANM-T04-01",
+        "tile_id": "T04",
+        "type": "vegetation_loss",
+        "severity": "medium",
+        "description": "Significant canopy loss, possible right-of-way violation",
+        "detected_at": "2026-04-19T06:11:55.238316Z",
+        "confidence": 0.79,
+        "source": "sentinel-2_ndvi",
+        "area_hectares": 5.76,
+        "status": "unreviewed",
+        "distance_to_pipeline_m": 686
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          71.112052,
+          22.579192
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ANM-T04-02",
+        "tile_id": "T04",
+        "type": "thermal_anomaly",
+        "severity": "low",
+        "description": "Industrial heat source, likely adjacent facility",
+        "detected_at": "2026-04-18T04:11:55.238316Z",
+        "confidence": 0.83,
+        "source": "viirs_thermal",
+        "area_hectares": 0.25,
+        "status": "unreviewed",
+        "distance_to_pipeline_m": 49
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          70.891031,
+          22.510624
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ANM-T05-01",
+        "tile_id": "T05",
+        "type": "vegetation_loss",
+        "severity": "low",
+        "description": "NDVI drop >0.3 over contiguous 2+ hectare area",
+        "detected_at": "2026-04-17T23:11:55.238316Z",
+        "confidence": 0.76,
+        "source": "sentinel-2_ndvi",
+        "area_hectares": 8.13,
+        "status": "unreviewed",
+        "distance_to_pipeline_m": 436
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          71.272455,
+          22.698569
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ANM-T05-02",
+        "tile_id": "T05",
+        "type": "encroachment",
+        "severity": "low",
+        "description": "New permanent structure detected within RoW",
+        "detected_at": "2026-04-20T13:11:55.238316Z",
+        "confidence": 0.72,
+        "source": "sentinel-2_classification",
+        "area_hectares": 0.85,
+        "status": "unreviewed",
+        "distance_to_pipeline_m": 752
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          71.510213,
+          22.744905
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ANM-T05-03",
+        "tile_id": "T05",
+        "type": "water_pooling",
+        "severity": "medium",
+        "description": "Seasonal water body expansion within buffer",
+        "detected_at": "2026-04-19T04:11:55.238316Z",
+        "confidence": 0.73,
+        "source": "sentinel-1_backscatter",
+        "area_hectares": 5.53,
+        "status": "unreviewed",
+        "distance_to_pipeline_m": 328
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          71.652155,
+          22.798083
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ANM-T06-01",
+        "tile_id": "T06",
+        "type": "vegetation_loss",
+        "severity": "high",
+        "description": "Vegetation clearing detected along RoW corridor",
+        "detected_at": "2026-04-20T21:11:55.238316Z",
+        "confidence": 0.74,
+        "source": "sentinel-2_ndvi",
+        "area_hectares": 8.11,
+        "status": "unreviewed",
+        "distance_to_pipeline_m": 502
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.152949,
+          22.726732
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ANM-T06-02",
+        "tile_id": "T06",
+        "type": "vegetation_loss",
+        "severity": "medium",
+        "description": "Significant canopy loss, possible right-of-way violation",
+        "detected_at": "2026-04-18T14:11:55.238316Z",
+        "confidence": 0.88,
+        "source": "sentinel-2_ndvi",
+        "area_hectares": 7.5,
+        "status": "unreviewed",
+        "distance_to_pipeline_m": 253
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          71.921054,
+          22.739222
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ANM-T07-01",
+        "tile_id": "T07",
+        "type": "encroachment",
+        "severity": "high",
+        "description": "Unauthorized construction adjacent to pipeline",
+        "detected_at": "2026-04-16T07:11:55.238316Z",
+        "confidence": 0.86,
+        "source": "sentinel-2_classification",
+        "area_hectares": 0.22,
+        "status": "unreviewed",
+        "distance_to_pipeline_m": 35
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.19661,
+          22.619164
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ANM-T07-02",
+        "tile_id": "T07",
+        "type": "encroachment",
+        "severity": "medium",
+        "description": "Unauthorized construction adjacent to pipeline",
+        "detected_at": "2026-04-20T20:11:55.238316Z",
+        "confidence": 0.76,
+        "source": "sentinel-2_classification",
+        "area_hectares": 0.83,
+        "status": "unreviewed",
+        "distance_to_pipeline_m": 440
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.313039,
+          22.539367
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ANM-T08-01",
+        "tile_id": "T08",
+        "type": "encroachment",
+        "severity": "medium",
+        "description": "Informal settlement expansion within buffer zone",
+        "detected_at": "2026-04-20T13:11:55.238316Z",
+        "confidence": 0.75,
+        "source": "sentinel-2_classification",
+        "area_hectares": 1.45,
+        "status": "unreviewed",
+        "distance_to_pipeline_m": 584
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.999062,
+          22.347163
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ANM-T09-01",
+        "tile_id": "T09",
+        "type": "excavation",
+        "severity": "medium",
+        "description": "Construction-scale ground disturbance detected",
+        "detected_at": "2026-04-20T17:11:55.238316Z",
+        "confidence": 0.84,
+        "source": "sentinel-1_coherence",
+        "area_hectares": 3.27,
+        "status": "unreviewed",
+        "distance_to_pipeline_m": 336
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.058271,
+          22.340563
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ANM-T09-02",
+        "tile_id": "T09",
+        "type": "encroachment",
+        "severity": "medium",
+        "description": "New road alignment crossing RoW",
+        "detected_at": "2026-04-21T06:11:55.238316Z",
+        "confidence": 0.92,
+        "source": "sentinel-2_classification",
+        "area_hectares": 2.18,
+        "status": "unreviewed",
+        "distance_to_pipeline_m": 255
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.090692,
+          22.309312
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ANM-T12-01",
+        "tile_id": "T12",
+        "type": "vegetation_loss",
+        "severity": "low",
+        "description": "Significant canopy loss, possible right-of-way violation",
+        "detected_at": "2026-04-15T15:11:55.238316Z",
+        "confidence": 0.73,
+        "source": "sentinel-2_ndvi",
+        "area_hectares": 4.21,
+        "status": "unreviewed",
+        "distance_to_pipeline_m": 39
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.475092,
+          22.957962
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ANM-T12-02",
+        "tile_id": "T12",
+        "type": "encroachment",
+        "severity": "high",
+        "description": "New permanent structure detected within RoW",
+        "detected_at": "2026-04-14T23:11:55.238316Z",
+        "confidence": 0.79,
+        "source": "sentinel-2_classification",
+        "area_hectares": 0.49,
+        "status": "unreviewed",
+        "distance_to_pipeline_m": 686
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.402471,
+          22.77985
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ANM-T13-01",
+        "tile_id": "T13",
+        "type": "vegetation_loss",
+        "severity": "high",
+        "description": "Seasonal NDVI variation within expected range",
+        "detected_at": "2026-04-20T07:11:55.238316Z",
+        "confidence": 0.75,
+        "source": "sentinel-2_ndvi",
+        "area_hectares": 6.97,
+        "status": "unreviewed",
+        "distance_to_pipeline_m": 421
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.781242,
+          23.150478
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ANM-T14-01",
+        "tile_id": "T14",
+        "type": "excavation",
+        "severity": "high",
+        "description": "SAR coherence loss indicating recent earthworks",
+        "detected_at": "2026-04-19T23:11:55.238316Z",
+        "confidence": 0.75,
+        "source": "sentinel-1_coherence",
+        "area_hectares": 3.41,
+        "status": "unreviewed",
+        "distance_to_pipeline_m": 541
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.406987,
+          23.159001
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ANM-T14-02",
+        "tile_id": "T14",
+        "type": "thermal_anomaly",
+        "severity": "high",
+        "description": "Industrial heat source, likely adjacent facility",
+        "detected_at": "2026-04-21T07:11:55.238316Z",
+        "confidence": 0.78,
+        "source": "viirs_thermal",
+        "area_hectares": 0.36,
+        "status": "unreviewed",
+        "distance_to_pipeline_m": 778
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.326609,
+          23.195444
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ANM-T14-03",
+        "tile_id": "T14",
+        "type": "water_pooling",
+        "severity": "medium",
+        "description": "Seasonal water body expansion within buffer",
+        "detected_at": "2026-04-19T20:11:55.238316Z",
+        "confidence": 0.81,
+        "source": "sentinel-1_backscatter",
+        "area_hectares": 3.11,
+        "status": "unreviewed",
+        "distance_to_pipeline_m": 822
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.284272,
+          23.211276
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ANM-T15-01",
+        "tile_id": "T15",
+        "type": "vegetation_loss",
+        "severity": "high",
+        "description": "Seasonal NDVI variation within expected range",
+        "detected_at": "2026-04-18T03:11:55.238316Z",
+        "confidence": 0.69,
+        "source": "sentinel-2_ndvi",
+        "area_hectares": 8.03,
+        "status": "unreviewed",
+        "distance_to_pipeline_m": 156
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.022786,
+          23.36342
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ANM-T15-02",
+        "tile_id": "T15",
+        "type": "excavation",
+        "severity": "high",
+        "description": "SAR coherence loss indicating recent earthworks",
+        "detected_at": "2026-04-20T00:11:55.238316Z",
+        "confidence": 0.81,
+        "source": "sentinel-1_coherence",
+        "area_hectares": 2.29,
+        "status": "unreviewed",
+        "distance_to_pipeline_m": 692
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.038579,
+          23.325102
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ANM-T16-01",
+        "tile_id": "T16",
+        "type": "vegetation_loss",
+        "severity": "high",
+        "description": "Seasonal NDVI variation within expected range",
+        "detected_at": "2026-04-19T00:11:55.238316Z",
+        "confidence": 0.73,
+        "source": "sentinel-2_ndvi",
+        "area_hectares": 11.7,
+        "status": "unreviewed",
+        "distance_to_pipeline_m": 635
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.094573,
+          23.467653
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ANM-T17-01",
+        "tile_id": "T17",
+        "type": "water_pooling",
+        "severity": "medium",
+        "description": "Unusual water accumulation near RoW, possible subsidence",
+        "detected_at": "2026-04-17T04:11:55.238316Z",
+        "confidence": 0.76,
+        "source": "sentinel-1_backscatter",
+        "area_hectares": 1.86,
+        "status": "unreviewed",
+        "distance_to_pipeline_m": 123
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.642897,
+          24.007227
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ANM-T17-02",
+        "tile_id": "T17",
+        "type": "water_pooling",
+        "severity": "medium",
+        "description": "Unusual water accumulation near RoW, possible subsidence",
+        "detected_at": "2026-04-19T20:11:55.238316Z",
+        "confidence": 0.68,
+        "source": "sentinel-1_backscatter",
+        "area_hectares": 4.26,
+        "status": "unreviewed",
+        "distance_to_pipeline_m": 481
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.607457,
+          23.958692
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ANM-T18-01",
+        "tile_id": "T18",
+        "type": "vegetation_loss",
+        "severity": "high",
+        "description": "NDVI drop >0.3 over contiguous 2+ hectare area",
+        "detected_at": "2026-04-19T22:11:55.238316Z",
+        "confidence": 0.85,
+        "source": "sentinel-2_ndvi",
+        "area_hectares": 8.23,
+        "status": "unreviewed",
+        "distance_to_pipeline_m": 489
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.822918,
+          24.296187
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ANM-T18-02",
+        "tile_id": "T18",
+        "type": "encroachment",
+        "severity": "medium",
+        "description": "New road alignment crossing RoW",
+        "detected_at": "2026-04-17T22:11:55.238316Z",
+        "confidence": 0.89,
+        "source": "sentinel-2_classification",
+        "area_hectares": 1.14,
+        "status": "unreviewed",
+        "distance_to_pipeline_m": 284
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.825761,
+          24.298453
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ANM-T18-03",
+        "tile_id": "T18",
+        "type": "encroachment",
+        "severity": "medium",
+        "description": "Unauthorized construction adjacent to pipeline",
+        "detected_at": "2026-04-18T23:11:55.238316Z",
+        "confidence": 0.79,
+        "source": "sentinel-2_classification",
+        "area_hectares": 0.89,
+        "status": "unreviewed",
+        "distance_to_pipeline_m": 709
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.885765,
+          24.222617
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ANM-T19-01",
+        "tile_id": "T19",
+        "type": "water_pooling",
+        "severity": "medium",
+        "description": "Unusual water accumulation near RoW, possible subsidence",
+        "detected_at": "2026-04-20T03:11:55.238316Z",
+        "confidence": 0.69,
+        "source": "sentinel-1_backscatter",
+        "area_hectares": 5.08,
+        "status": "unreviewed",
+        "distance_to_pipeline_m": 836
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.025666,
+          24.537846
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ANM-T19-02",
+        "tile_id": "T19",
+        "type": "vegetation_loss",
+        "severity": "low",
+        "description": "Significant canopy loss, possible right-of-way violation",
+        "detected_at": "2026-04-18T09:11:55.238316Z",
+        "confidence": 0.65,
+        "source": "sentinel-2_ndvi",
+        "area_hectares": 4.59,
+        "status": "unreviewed",
+        "distance_to_pipeline_m": 652
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.130533,
+          24.750429
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ANM-T19-03",
+        "tile_id": "T19",
+        "type": "excavation",
+        "severity": "high",
+        "description": "Deep tilling or excavation within 100m of RoW",
+        "detected_at": "2026-04-19T08:11:55.238316Z",
+        "confidence": 0.81,
+        "source": "sentinel-1_coherence",
+        "area_hectares": 1.44,
+        "status": "unreviewed",
+        "distance_to_pipeline_m": 712
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.005197,
+          24.559152
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ANM-T20-01",
+        "tile_id": "T20",
+        "type": "encroachment",
+        "severity": "high",
+        "description": "Informal settlement expansion within buffer zone",
+        "detected_at": "2026-04-20T06:11:55.238316Z",
+        "confidence": 0.73,
+        "source": "sentinel-2_classification",
+        "area_hectares": 2.36,
+        "status": "unreviewed",
+        "distance_to_pipeline_m": 506
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.271466,
+          25.116023
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ANM-T20-02",
+        "tile_id": "T20",
+        "type": "encroachment",
+        "severity": "low",
+        "description": "New road alignment crossing RoW",
+        "detected_at": "2026-04-20T23:11:55.238316Z",
+        "confidence": 0.73,
+        "source": "sentinel-2_classification",
+        "area_hectares": 1.09,
+        "status": "unreviewed",
+        "distance_to_pipeline_m": 799
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.227141,
+          24.980669
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ANM-T21-01",
+        "tile_id": "T21",
+        "type": "water_pooling",
+        "severity": "medium",
+        "description": "Seasonal water body expansion within buffer",
+        "detected_at": "2026-04-20T20:11:55.238316Z",
+        "confidence": 0.71,
+        "source": "sentinel-1_backscatter",
+        "area_hectares": 5.78,
+        "status": "unreviewed",
+        "distance_to_pipeline_m": 555
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.441778,
+          25.471477
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ANM-T21-02",
+        "tile_id": "T21",
+        "type": "vegetation_loss",
+        "severity": "medium",
+        "description": "NDVI drop >0.3 over contiguous 2+ hectare area",
+        "detected_at": "2026-04-20T15:11:55.238316Z",
+        "confidence": 0.88,
+        "source": "sentinel-2_ndvi",
+        "area_hectares": 10.42,
+        "status": "unreviewed",
+        "distance_to_pipeline_m": 758
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.464534,
+          25.638891
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ANM-T21-03",
+        "tile_id": "T21",
+        "type": "vegetation_loss",
+        "severity": "high",
+        "description": "Vegetation clearing detected along RoW corridor",
+        "detected_at": "2026-04-20T11:11:55.238316Z",
+        "confidence": 0.83,
+        "source": "sentinel-2_ndvi",
+        "area_hectares": 6.94,
+        "status": "unreviewed",
+        "distance_to_pipeline_m": 69
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.467245,
+          25.744413
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ANM-T22-01",
+        "tile_id": "T22",
+        "type": "excavation",
+        "severity": "high",
+        "description": "Agricultural deep-plowing near pipeline centerline",
+        "detected_at": "2026-04-20T19:11:55.238316Z",
+        "confidence": 0.9,
+        "source": "sentinel-1_coherence",
+        "area_hectares": 3.63,
+        "status": "unreviewed",
+        "distance_to_pipeline_m": 497
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.488476,
+          26.177078
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ANM-T22-02",
+        "tile_id": "T22",
+        "type": "encroachment",
+        "severity": "high",
+        "description": "New road alignment crossing RoW",
+        "detected_at": "2026-04-17T04:11:55.238316Z",
+        "confidence": 0.79,
+        "source": "sentinel-2_classification",
+        "area_hectares": 0.68,
+        "status": "unreviewed",
+        "distance_to_pipeline_m": 447
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.511808,
+          25.85531
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ANM-T23-01",
+        "tile_id": "T23",
+        "type": "vegetation_loss",
+        "severity": "medium",
+        "description": "Vegetation clearing detected along RoW corridor",
+        "detected_at": "2026-04-16T02:11:55.238316Z",
+        "confidence": 0.89,
+        "source": "sentinel-2_ndvi",
+        "area_hectares": 2.01,
+        "status": "unreviewed",
+        "distance_to_pipeline_m": 95
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.562356,
+          26.425098
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ANM-T23-02",
+        "tile_id": "T23",
+        "type": "vegetation_loss",
+        "severity": "low",
+        "description": "Vegetation clearing detected along RoW corridor",
+        "detected_at": "2026-04-16T16:11:55.238316Z",
+        "confidence": 0.68,
+        "source": "sentinel-2_ndvi",
+        "area_hectares": 5.71,
+        "status": "unreviewed",
+        "distance_to_pipeline_m": 664
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.495279,
+          26.42188
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ANM-T24-01",
+        "tile_id": "T24",
+        "type": "encroachment",
+        "severity": "high",
+        "description": "New permanent structure detected within RoW",
+        "detected_at": "2026-04-19T19:11:55.238316Z",
+        "confidence": 0.82,
+        "source": "sentinel-2_classification",
+        "area_hectares": 2.46,
+        "status": "unreviewed",
+        "distance_to_pipeline_m": 401
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.59187,
+          26.803885
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ANM-T24-02",
+        "tile_id": "T24",
+        "type": "excavation",
+        "severity": "medium",
+        "description": "Construction-scale ground disturbance detected",
+        "detected_at": "2026-04-17T12:11:55.238316Z",
+        "confidence": 0.86,
+        "source": "sentinel-1_coherence",
+        "area_hectares": 3.31,
+        "status": "unreviewed",
+        "distance_to_pipeline_m": 57
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.593193,
+          26.931365
+        ]
+      }
+    }
+  ]
+}

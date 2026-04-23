@@ -1,0 +1,74 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "IOCL Salaya-Mathura Crude Pipeline",
+        "operator": "Indian Oil Corporation Limited",
+        "type": "crude_oil",
+        "diameter_inch": 28,
+        "length_km_approx": 1870,
+        "commissioned": 1996,
+        "status": "operational"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            69.251,
+            22.462
+          ],
+          [
+            69.78,
+            22.42
+          ],
+          [
+            70.56,
+            22.46
+          ],
+          [
+            71.65,
+            22.78
+          ],
+          [
+            72.04,
+            22.77
+          ],
+          [
+            72.68,
+            22.35
+          ],
+          [
+            73.2,
+            22.31
+          ],
+          [
+            74.15,
+            22.58
+          ],
+          [
+            74.75,
+            23.18
+          ],
+          [
+            75.88,
+            23.18
+          ],
+          [
+            76.8,
+            24.15
+          ],
+          [
+            77.42,
+            25.45
+          ],
+          [
+            77.67,
+            27.49
+          ]
+        ]
+      }
+    }
+  ]
+}

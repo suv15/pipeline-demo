@@ -1,0 +1,165 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ANM-001",
+        "type": "encroachment",
+        "severity": "high",
+        "description": "New structure detected within 50m of RoW",
+        "detected_at": "2026-04-15T10:30:00Z",
+        "confidence": 0.69,
+        "source": "sentinel-2_ndvi",
+        "status": "unreviewed"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          70.65881431200064,
+          22.487299220318555
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ANM-002",
+        "type": "vegetation_loss",
+        "severity": "medium",
+        "description": "NDVI drop >0.3 over 2 hectares",
+        "detected_at": "2026-04-15T10:30:00Z",
+        "confidence": 0.65,
+        "source": "sentinel-2_ndvi",
+        "status": "unreviewed"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.02454992147518,
+          22.77833036233546
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ANM-003",
+        "type": "excavation",
+        "severity": "high",
+        "description": "Earthworks detected adjacent to pipeline",
+        "detected_at": "2026-04-15T10:30:00Z",
+        "confidence": 0.78,
+        "source": "sentinel-1_change",
+        "status": "unreviewed"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.9849677053107,
+          22.32019031634823
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ANM-004",
+        "type": "vegetation_loss",
+        "severity": "low",
+        "description": "Seasonal NDVI variation, likely benign",
+        "detected_at": "2026-04-15T10:30:00Z",
+        "confidence": 0.79,
+        "source": "sentinel-2_ndvi",
+        "status": "unreviewed"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.99787016076644,
+          22.541472657274785
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ANM-005",
+        "type": "encroachment",
+        "severity": "medium",
+        "description": "Unauthorized road crossing RoW",
+        "detected_at": "2026-04-15T10:30:00Z",
+        "confidence": 0.62,
+        "source": "sentinel-2_ndvi",
+        "status": "unreviewed"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.21491305495023,
+          23.186188609133556
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ANM-006",
+        "type": "thermal_anomaly",
+        "severity": "high",
+        "description": "Persistent thermal signature, possible leak",
+        "detected_at": "2026-04-15T10:30:00Z",
+        "confidence": 0.67,
+        "source": "sentinel-2_ndvi",
+        "status": "unreviewed"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.62493151909015,
+          23.958043781259352
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ANM-007",
+        "type": "excavation",
+        "severity": "medium",
+        "description": "Agricultural deep-tilling near RoW",
+        "detected_at": "2026-04-15T10:30:00Z",
+        "confidence": 0.65,
+        "source": "sentinel-1_change",
+        "status": "unreviewed"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.3016661339928,
+          25.200588007218734
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ANM-008",
+        "type": "encroachment",
+        "severity": "low",
+        "description": "Small structure, pre-existing per archive",
+        "detected_at": "2026-04-15T10:30:00Z",
+        "confidence": 0.85,
+        "source": "sentinel-2_ndvi",
+        "status": "unreviewed"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.54116319013565,
+          26.42790610865331
+        ]
+      }
+    }
+  ]
+}
