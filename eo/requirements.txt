@@ -1,0 +1,10 @@
+# Core STAC + Planetary Computer
+pystac-client==0.8.5
+planetary-computer==1.0.0
+
+# Geometry (matches root backend versions to avoid resolver conflicts)
+shapely==2.0.6
+pyproj==3.7.0
+
+# Will add raster libs (rasterio, rioxarray, xarray, numpy) in next phase
+# once STAC scene listing is verified end-to-end.
