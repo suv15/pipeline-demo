@@ -6,5 +6,6 @@ planetary-computer==1.0.0
 shapely==2.0.6
 pyproj==3.7.0
 
-# Will add raster libs (rasterio, rioxarray, xarray, numpy) in next phase
-# once STAC scene listing is verified end-to-end.
+# Raster IO + processing — read windowed bands directly from
+# Planetary Computer's signed COG URLs, no full-tile download.
+rasterio==1.4.3

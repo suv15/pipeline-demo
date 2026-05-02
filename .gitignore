@@ -25,3 +25,6 @@ dist/
 
 # Logs
 *.log
+
+# EO pipeline outputs — large per-tile GeoJSONs, regenerable from STAC
+eo/out/
