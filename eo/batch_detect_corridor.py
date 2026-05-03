@@ -149,18 +149,29 @@ def merge(per_tile_paths: list[Path]) -> dict:
             props = feat["properties"]
             tile_id = props.get("tile_id", "?")
             after_dt = props.get("after_acquisition", "")[:10]
-            # Synthesize a stable id and a few demo-friendly fields
-            props["id"] = f"S2-VEG-{tile_id}-{after_dt.replace('-','')}-{i+1:03d}"
+            atype = props.get("type", "anomaly")
+            id_prefix = {
+                "vegetation_loss": "S2-VEG",
+                "water_pooling":   "S2-WATER",
+            }.get(atype, "S2")
+            props["id"] = f"{id_prefix}-{tile_id}-{after_dt.replace('-','')}-{i+1:03d}"
             props.setdefault("status", "unreviewed")
             props.setdefault("detected_at",
                              datetime.now(timezone.utc).isoformat()
                              .replace("+00:00", "Z"))
-            ndvi_drop = props.get("ndvi_drop_mean")
             ha = props.get("area_hectares")
-            dist = props.get("distance_to_pipeline_m")
+            dist = props.get("distance_to_pipeline_m") or 0
+            ndvi_drop = props.get("ndvi_drop_mean")
+            ndwi_rise = props.get("ndwi_rise_mean")
+            if ndvi_drop is not None:
+                metric = f"NDVI dropped {ndvi_drop:+.2f}"
+            elif ndwi_rise is not None:
+                metric = f"NDWI rose {ndwi_rise:+.2f}"
+            else:
+                metric = "anomaly"
             props.setdefault(
                 "description",
-                f"NDVI dropped {ndvi_drop:+.2f} over {ha} ha "
+                f"{metric} over {ha} ha "
                 f"({dist:.0f} m from pipeline) between "
                 f"{props.get('before_acquisition','')[:10]} and {after_dt}",
             )
