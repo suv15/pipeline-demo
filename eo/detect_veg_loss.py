@@ -61,15 +61,31 @@ def find_scene_pair(catalog, aoi, tile_id, max_cloud, min_gap_days, lookback_day
     # NOTE: When restricting by s2:mgrs_tile, do NOT pass intersects= — the tile
     # id alone gives a tight geographic filter, and the corridor polygon
     # combined with a long lookback will time out Planetary Computer's STAC API.
-    search = catalog.search(
-        collections=[COLLECTION],
-        datetime=f"{start.isoformat()}/{end.isoformat()}",
-        query={
-            "eo:cloud_cover": {"lt": max_cloud},
-            "s2:mgrs_tile": {"eq": tile_id},
-        },
-    )
-    items = sorted(search.items(), key=lambda i: i.datetime, reverse=True)
+    # Retry on transient timeouts (STAC API occasionally returns 504 under load).
+    import time as _time
+    from pystac_client.exceptions import APIError
+    last_err = None
+    for attempt in range(3):
+        try:
+            search = catalog.search(
+                collections=[COLLECTION],
+                datetime=f"{start.isoformat()}/{end.isoformat()}",
+                query={
+                    "eo:cloud_cover": {"lt": max_cloud},
+                    "s2:mgrs_tile": {"eq": tile_id},
+                },
+            )
+            items = sorted(search.items(), key=lambda i: i.datetime, reverse=True)
+            break
+        except APIError as e:
+            last_err = e
+            if attempt < 2:
+                wait = 5 * (2 ** attempt)
+                print(f"      STAC retry {attempt+1}/3 after {wait}s: {e}",
+                      flush=True)
+                _time.sleep(wait)
+            else:
+                raise
     if len(items) < 2:
         sys.exit(f"Only {len(items)} cloud-free scenes for tile {tile_id} — need 2.")
     after = items[0]
@@ -80,20 +96,57 @@ def find_scene_pair(catalog, aoi, tile_id, max_cloud, min_gap_days, lookback_day
     return before, after
 
 
-def read_band_window(item, band_name, aoi_geom_4326):
-    """Read a Sentinel-2 band, windowed to the AOI bbox (in image CRS)."""
+# GDAL/CURL tuning for streaming COG reads from Planetary Computer.
+# These shave a lot of latency off the open() handshake and let slow links
+# survive transient hiccups instead of dying mid-tile.
+_RIO_ENV = dict(
+    GDAL_DISABLE_READDIR_ON_OPEN="EMPTY_DIR",
+    CPL_VSIL_CURL_ALLOWED_EXTENSIONS=".tif,.TIF,.tiff",
+    GDAL_HTTP_MAX_RETRY=5,
+    GDAL_HTTP_RETRY_DELAY=2,
+    GDAL_HTTP_TIMEOUT=120,
+    GDAL_HTTP_MERGE_CONSECUTIVE_RANGES="YES",
+    VSI_CACHE=True,
+    VSI_CACHE_SIZE=67108864,  # 64 MB per-file cache
+    GDAL_CACHEMAX=512,
+)
+
+
+def read_band_window(item, band_name, aoi_geom_4326, retries: int = 2):
+    """Read a Sentinel-2 band, windowed to the AOI bbox (in image CRS).
+
+    Retries on transient HTTP errors that occasionally surface from
+    Planetary Computer's blob backend during heavy parallel reads.
+    """
+    import time as _time
     asset = item.assets[band_name]
-    with rasterio.open(asset.href) as src:
-        # AOI bbox in image CRS
-        aoi_bounds = transform_bounds("EPSG:4326", src.crs, *aoi_geom_4326.bounds)
-        window = window_from_bounds(*aoi_bounds, transform=src.transform)
-        # Round window to integer pixel boundaries, intersect with image
-        window = window.round_offsets().round_lengths().intersection(
-            rasterio.windows.Window(0, 0, src.width, src.height)
-        )
-        data = src.read(1, window=window).astype("float32")
-        win_transform = src.window_transform(window)
-        return data, win_transform, src.crs
+    last_err = None
+    for attempt in range(retries + 1):
+        try:
+            with rasterio.Env(**_RIO_ENV):
+                with rasterio.open(asset.href) as src:
+                    aoi_bounds = transform_bounds(
+                        "EPSG:4326", src.crs, *aoi_geom_4326.bounds
+                    )
+                    window = window_from_bounds(
+                        *aoi_bounds, transform=src.transform
+                    )
+                    window = window.round_offsets().round_lengths().intersection(
+                        rasterio.windows.Window(0, 0, src.width, src.height)
+                    )
+                    data = src.read(1, window=window).astype("float32")
+                    win_transform = src.window_transform(window)
+                    return data, win_transform, src.crs
+        except (rasterio.errors.RasterioIOError, OSError) as e:
+            last_err = e
+            if attempt < retries:
+                wait = 4 * (2 ** attempt)
+                print(f"      band-read retry {attempt+1}/{retries} "
+                      f"({band_name}) after {wait}s: {type(e).__name__}: {e}",
+                      flush=True)
+                _time.sleep(wait)
+            else:
+                raise
 
 
 def ndvi(red, nir):
