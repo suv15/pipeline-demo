@@ -1,22 +1,22 @@
 {
-  "scan_id": "S2-20260502-112742",
-  "scan_started_at": "2026-05-02T11:27:42.840266Z",
-  "scan_completed_at": "2026-05-02T11:27:42.840266Z",
+  "scan_id": "S2-20260503-201150",
+  "scan_started_at": "2026-05-03T20:11:50.670239Z",
+  "scan_completed_at": "2026-05-03T20:11:50.670239Z",
   "duration_seconds": 0.0,
-  "tiles_processed": 4,
+  "tiles_processed": 10,
   "total_km_monitored": 1870,
-  "total_anomalies": 200,
+  "total_anomalies": 138,
   "anomalies_by_type": {
-    "vegetation_loss": 200
+    "vegetation_loss": 138
   },
   "anomalies_by_severity": {
-    "high": 49,
-    "medium": 98,
-    "low": 53
+    "high": 17,
+    "medium": 65,
+    "low": 56
   },
   "sentinel_sources": {
     "sentinel-2_l2a": "Real NDVI difference, Microsoft Planetary Computer, 5-day revisit, latest cloud-free pair per MGRS tile"
   },
-  "most_recent_acquisition": "2026-05-01T05:36:39.024000+00:00",
+  "most_recent_acquisition": "2026-05-03T05:30:21.025000+00:00",
   "tile_summaries": []
 }
